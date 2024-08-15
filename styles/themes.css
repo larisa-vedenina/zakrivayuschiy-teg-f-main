@@ -1,0 +1,47 @@
+/* В этом файле вы опишете значения переменных в разных цветовых схемах.
+Придерживайтесь такого именования классов:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
+*/
+
+:root.theme-light {
+    --accent-font: "PressStart2P", sans-serif;
+    --main-font: "Inter-Variable", sans-serif;
+    --wght-title: 700;
+    --wght-text: 400;
+    --bg-color: #FFFFFF;
+    --accent-color: #000000;
+    --botton-animation-color: #ffffff;
+    --bg-image: repeating-linear-gradient( to right, #d3d3d3, #d3d3d3 2px, #d3d3d300 2px, #d3d3d300 4px ), repeating-linear-gradient( to bottom, #d3d3d3, #d3d3d3 2px, #d3d3d300 2px, #d3d3d300 4px ), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    --heart-contour: #000000;
+    --fill-color: #ff0000;
+}
+
+:root.theme-dark {
+    --accent-font: "PressStart2P", sans-serif;
+    --main-font: "Inter-Variable", sans-serif;
+    --wght-title: 785;
+    --wght-text: 465;
+    --bg-color: #000000;
+    --accent-color: #00CC14;
+    --botton-animation-color: #00CC14;
+    --bg-image: repeating-linear-gradient(90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px), repeating-linear-gradient(180deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px), linear-gradient(180deg, #007f0c 0%, #004306 100%);
+    --heart-contour: #00CC14;
+    --fill-color: #ff0000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent-font: "PressStart2P", sans-serif;
+        --main-font: "Inter-Variable", sans-serif;
+        --wght-title: 785;
+        --wght-text: 465;
+        --bg-color: #000000;
+        --accent-color: #00CC14;
+        --botton-animation-color: #00CC14;
+        --bg-image: repeating-linear-gradient(90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px), repeating-linear-gradient(180deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px), linear-gradient(180deg, #007f0c 0%, #004306 100%);
+        --heart-contour: #00CC14;
+        --fill-color: #ff0000;
+    }
+}
