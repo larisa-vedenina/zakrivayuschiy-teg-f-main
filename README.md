@@ -1,1 +1,6 @@
-https://github.com/larisa-vedenina/zakrivayuschiy-teg-f.git
+**Адаптивный сайт в светлой и тёмной темах**
+
+*CSS анимация кнопок, иконок. Работа с SVG.*
+
+* 375px
+* 1440px
