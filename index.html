@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
     <title>Закрывающий тег</title>
+    <meta
+      name="description"
+      content="Интерактивный дневник с воспоминаниями о процессе обучения фронтенд-разработке. Анимированные карточки с CSS фильтрами и темами оформления."
+    />
+
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -12,18 +17,27 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
+
     <script src="./scripts/set-theme.js"></script>
   </head>
+
   <body class="page">
     <header class="header">
-      <div class="header_titles">
-        <a class="header__link">&lt;/html&gt;</a>
+      <div class="header__titles">
+        <a class="header__link" href="#" aria-label="На главную"
+          >&lt;/html&gt;</a
+        >
         <h1 class="header__title">закрывающий тег</h1>
       </div>
-      <nav class="theme-menu header__theme-menu">
+      <nav class="theme-menu header__theme-menu" aria-label="Переключение темы">
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
-            <button type="button" data-theme="dark" class="theme-menu__button">
+            <button
+              type="button"
+              data-theme="dark"
+              class="theme-menu__button"
+              aria-pressed="false"
+            >
               Темно
             </button>
           </li>
@@ -32,19 +46,21 @@
               type="button"
               data-theme="auto"
               disabled
-              class="theme-menu__button"
+              class="theme-menu__button theme-menu__button_active"
+              aria-pressed="true"
             >
               Авто
             </button>
           </li>
           <li class="theme-menu__item">
-            <button type="button" data-theme="light" class="theme-menu__button">
+            <button type="button" data-theme="light" class="theme-menu__button" aria-pressed="false">
               Светло
             </button>
           </li>
         </ul>
       </nav>
     </header>
+
     <main class="content">
       <ul class="content__cards">
         <li class="card">
@@ -56,6 +72,7 @@
               class="card__picture-img"
               src="./images/image_zero.jpg"
               alt="пиксельная картинка минивена"
+              loading="lazy"
             />
             <span class="card__picture-watermark"> &lt;/html&gt; </span>
           </article>
@@ -129,6 +146,7 @@
               class="card__picture-img contrast"
               src="./images/image_zero.jpg"
               alt="пиксельная картинка минивена"
+              loading="lazy"
             />
             <span class="card__picture-watermark"> &lt;/html&gt; </span>
           </article>
@@ -204,6 +222,7 @@
               class="card__picture-img grayscale"
               src="./images/image_zero.jpg"
               alt="пиксельная картинка минивена"
+              loading="lazy"
             />
             <span class="card__picture-watermark"> &lt;css&gt; </span>
           </article>
@@ -277,8 +296,11 @@
               class="card__picture-img hue-rotate"
               src="./images/image_zero.jpg"
               alt="пиксельная картинка минивена"
+              loading="lazy"
             />
-            <span class="card__picture-watermark watermark-lowercase"> &lt;desigions&gt; </span>
+            <span class="card__picture-watermark watermark-lowercase">
+              &lt;desigions&gt;
+            </span>
           </article>
           <div class="card__content">
             <p class="card__content-text">
@@ -352,8 +374,11 @@
               class="card__picture-img invert"
               src="./images/image_zero.jpg"
               alt="пиксельная картинка минивена"
+              loading="lazy"
             />
-            <span class="card__picture-watermark watermark-lowercase"> care </span>
+            <span class="card__picture-watermark watermark-lowercase">
+              care
+            </span>
           </article>
           <div class="card__content">
             <p class="card__content-text">
@@ -428,8 +453,11 @@
               class="card__picture-img blur"
               src="./images/image_zero.jpg"
               alt="пиксельная картинка минивена"
+              loading="lazy"
             />
-            <span class="card__picture-watermark watermark-lowercase"> &lt;support&gt; </span>
+            <span class="card__picture-watermark watermark-lowercase">
+              &lt;support&gt;
+            </span>
           </article>
           <div class="card__content">
             <p class="card__content-text">
@@ -501,8 +529,11 @@
               class="card__picture-img filters"
               src="./images/image_zero.jpg"
               alt="пиксельная картинка минивена"
+              loading="lazy"
             />
-            <span class="card__picture-watermark watermark-lowercase"> &lt;lifes-style: none;&gt; </span>
+            <span class="card__picture-watermark watermark-lowercase">
+              &lt;lifes-style: none;&gt;
+            </span>
           </article>
           <div class="card__content">
             <p class="card__content-text">
@@ -576,8 +607,11 @@
               class="card__picture-img sepia"
               src="./images/image_zero.jpg"
               alt="пиксельная картинка минивена"
+              loading="lazy"
             />
-            <span class="card__picture-watermark watermark-lowercase"> &lt;experience&gt; </span>
+            <span class="card__picture-watermark watermark-lowercase">
+              &lt;experience&gt;
+            </span>
           </article>
           <div class="card__content">
             <p class="card__content-text">
@@ -658,15 +692,17 @@
             class="floppy"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 39 39"
+            aria-hidden="true"
           >
             <use href="./svg/floppy-icon.svg#floppy"></use>
           </svg>
-          <span class="button__text"> Сохранить на память </span>
+          <span class="button__text">Сохранить на память</span>
         </button>
       </div>
     </main>
-    <dialog id="dialog-id" class="dialog" aria-labelledby="dialog-id">
-      <div class="dialog-content">
+
+    <dialog id="dialog-id" class="dialog" aria-labelledby="dialog-title">
+      <div class="dialog__content">
         <svg
           class="floppy-dialog"
           xmlns="http://www.w3.org/2000/svg"
@@ -682,6 +718,7 @@
         </button>
       </form>
     </dialog>
+
     <script src="./scripts/like.js"></script>
   </body>
 </html>
